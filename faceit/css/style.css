@@ -71,6 +71,79 @@ header{
 	justify-content: center;
 	align-items: center;
 }
+.header_content{
+	width: 100%;
+	height: 100%;
+	max-width: 1200px;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.search_block{
+	margin-left: auto;
+	margin-right: 0;
+}
+.search_block_close{
+	display: none;
+	cursor: pointer;
+	margin-left: auto;
+	margin-right: 20px;
+}
+.search_block_close>img{
+	width: 24px;
+	vertical-align: middle;
+}
+
+.search{
+	height: 40px;
+	align-items: center;
+	border-radius: 5px;
+	display: flex;
+	background-color: #282828;
+}
+.search>input{
+	color: #fff;
+	font-family: "DINPro","Segoe UI","Mina", sans-serif;
+	background-color: #282828;
+	border: 0;
+   	outline: none;
+    margin: 0 10px;
+    font-size: 18px;
+    width: 400px;
+    line-height: 24px;
+}
+.search_btn{
+	height: 24px;
+	width: 24px;
+	padding-right: 0;
+	padding-left: 0; 
+    margin: 2px 10px 0 auto;
+    box-sizing: content-box;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    border: 0;
+    background-color: inherit;
+    border:none;
+    outline: none;
+
+}
+.search_btn:active{
+			outline: none;
+}
+.search_btn>img{
+	width:24px;
+}
+.search_button_mobile{
+	display: none;
+	cursor: pointer;
+	position: absolute;
+	right: 20px;
+}
+.search_button_mobile>img{
+	width: 24px;
+	vertical-align: middle;
+}
 main{
 	display: flex;
 	flex-direction: column;
@@ -85,12 +158,12 @@ main{
 	font-size: 36px;
 	text-shadow:0 0 5px rgba(0,0,0,0.5);
 }
-.search{
+.search_main{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-.search_field{
+.search_main_field{
 	width: 800px;
 	height: 60px;
 	border-radius: 5px 0 0 5px;
@@ -325,7 +398,7 @@ footer{
 	color: #FF0101;
 }
 @media screen and (max-width: 450px) {
-	body{
+	.body_stats{
 		background-size:cover;
 	}
     .basic_stats_content{
@@ -407,6 +480,36 @@ footer{
     .match_stats_title>h2{
     	text-align: center;
     }
+    .search_block{
+		display: none;
+	}
+	.header_content{
+		justify-content: center;
+	}
+    .vis{
+		align-items: center;
+		display: flex;
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		justify-content: flex-end;
+		left: 0;
+		z-index: 999;
+	}
+	.search_button_mobile{
+		display: block;
+	}
+	.search{
+		margin-left: 20px;
+	}
+	.search>input{
+		width: 250px;
+	}
+	.disable{
+		display: none;
+	}
+	
 }
 
 

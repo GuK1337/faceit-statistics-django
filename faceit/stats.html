@@ -14,11 +14,25 @@
 </head>
 <body class="body_stats">
 	<header>
-		<div class="logo">
-			<img src="images/logo.jpg">
+		<div class="header_content">
+			<div class="logo">
+				<img src="images/logo.jpg">
+			</div>
+			<div class="search_block">
+				<form class="search" id="desktop-search">
+					<input type="text" name="text_search" class="search_input" placeholder="Faceit Nickname">
+					<button type="submit" class="search_btn"><img src="images/search.png"></button>
+				</form>
+				<div class="search_block_close">
+					<img src="images/x.png">
+				</div>
+			</div>
+			<div class="search_button_mobile">
+				<img src="images/search.png">
+			</div>
 		</div>
 	</header>
-	<main class="main_stats">
+	<main class="main_stats" id="app">
 		<div class="basic_stats">
 			<div class="main_content basic_stats_content">
 				<img src="images/ava.png" class="ava">
@@ -309,6 +323,7 @@
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/slick.js"></script>
 	<script src="js/Chart.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>
