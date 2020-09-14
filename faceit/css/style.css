@@ -346,24 +346,21 @@ footer{
 	margin-bottom: 10px;
 }
 .thread,.match_container{
-	width: 90%;
+	width: 100%;
 	display: grid;
-	grid-template-columns: 1fr 2fr 1.5fr 1fr 2fr 1fr 1fr 2fr;
+	grid-template-columns: 1fr 2fr 1.5fr 1fr 2fr 1fr 1fr 2fr 1fr;
 }
 .thread>div{
 	text-align: center;
 	font-weight: 500;
 }
 .match{
-	height: 80px;
 	width: 100%;
 	background-color: #141414;
 	position: relative;
 	box-sizing: border-box;
-	transition: background-color .2s;
-	cursor: pointer;
 }
-.match:hover{
+.match_container:hover{
 	background-color: #282828;
 }
 .match_win{
@@ -375,8 +372,11 @@ footer{
 	border-right: 2px solid #FF0101;
 }
 .match_container{
-	height: 100%;
+	box-sizing: border-box;
+	height: 80px;
 	align-items: center;
+	cursor: pointer;
+	transition: background-color .2s;
 }
 .match_container>div{
 	display: flex;
@@ -386,8 +386,8 @@ footer{
 }
 .map_img{
 	position: absolute;
-	height: 100%;
-	right: 0;
+	height: 80px;
+	right: 2px;
 	top:0;
 	pointer-events: none;
 }
@@ -396,6 +396,53 @@ footer{
 }
 .negative{
 	color: #FF0101;
+}
+.scoreboard{
+	width: 100%;
+	padding: 20px;
+	background-color: #141414;
+	display: none;
+}
+.scoreboard_show{
+	display: block;
+}
+.table{
+	width: 100%;
+	font-size: 14px;
+}
+.table td,.table th{
+	text-align: center;
+	padding: 5px;
+}
+.scoreboard_title{
+	display: flex;
+}
+.scoreboard_team_title{
+	font-weight: 500;
+	font-size: 18px;
+}
+.scoreboard_team_result{
+	font-weight: 500;
+	font-size: 18px;
+	margin-left: auto;
+}
+.scoreboard_team_result_win{
+	color: #06FF01;
+}
+.scoreboard_team_result_lose{
+	color: #FF0101;
+}
+.scoreboard table:first-child{
+	margin-bottom: 20px;
+}
+.table td>a{
+	transition: color .2s;
+}
+.table td>a:hover{
+	color: #FF5500;
+}
+.match_stat_row th:nth-child(2),.team_player_info td:nth-child(2){
+	text-align: left;
 }
 @media screen and (max-width: 450px) {
 	.body_stats{

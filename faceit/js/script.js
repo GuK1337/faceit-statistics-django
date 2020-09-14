@@ -78,10 +78,10 @@ $(document).ready(function(){
     $(".remain").html("You need " + (nextLvl+1 - elo) + " ELO to the next level");
     $(".match").each(function (index, element) {
         if ($(this).children(".match_container").children(".result").children(".current_result").html() == "WIN") {
-            $(this).addClass("match_win");
+            $(this).children(".match_container").addClass("match_win");
         }
         else{
-           $(this).addClass("match_lose"); 
+           $(this).children(".match_container").addClass("match_lose"); 
         } 
     });
     $(".result").each(function (index, element) {
@@ -97,6 +97,8 @@ $(document).ready(function(){
     });
     $(".elo_change").each(function (index, element) {
         (($(this).html()>0)?$(this).addClass("positive"):$(this).addClass("negative"))
+    });
+    $(".match_container").click(function(){return scrollPos = $(window).scrollTop(),$(this).parent().children(".scoreboard").toggleClass("scoreboard_show"),$(window).scrollTop(scrollPos)
     });
     $(".search_button_mobile").click(function(){return $(".search_block").toggleClass("vis"),
         $(".search_block_close").css({"display" : "block"}),
